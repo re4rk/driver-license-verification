@@ -2,6 +2,14 @@ plugins {
     java
     id("org.springframework.boot") version "3.3.7"
     id("io.spring.dependency-management") version "1.1.7"
+
+    id("checkstyle")
+}
+
+checkstyle {
+    maxWarnings = 0
+    configFile = file("${rootDir}/config/ArkCheckStyle.xml")
+    toolVersion = "8.39"
 }
 
 group = "com.ark"
