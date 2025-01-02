@@ -28,8 +28,8 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
-
     // validation;
     implementation("jakarta.validation:jakarta.validation-api:3.0.1")
 
