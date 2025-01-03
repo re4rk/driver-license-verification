@@ -46,6 +46,9 @@ public class RedisConfig {
         RedisTemplate<String, RedisDriverLicense> template = new RedisTemplate<>();
         template.setConnectionFactory(driverLicenseRedisConnectionFactory);
 
+        // Transaction
+        template.setEnableTransactionSupport(true);
+
         // ObjectMapper
         var objectMapper = new ObjectMapper();
         objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);

@@ -7,21 +7,20 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 
 @Slf4j
+@Repository
 @ConditionalOnProperty(
     name = "ark.driver-license.type",
     havingValue = "JPA"
 )
+@RequiredArgsConstructor
 public class JpaDriverLicenseRepository implements DriverLicenseRepository {
 
     private final SpringDataDriverLicenseRepository repository;
-
-    public JpaDriverLicenseRepository(SpringDataDriverLicenseRepository repository) {
-        this.repository = repository;
-    }
 
     @Override
     @Transactional
