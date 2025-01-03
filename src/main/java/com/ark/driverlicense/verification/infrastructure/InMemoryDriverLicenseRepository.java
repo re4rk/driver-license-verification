@@ -3,9 +3,7 @@ package com.ark.driverlicense.verification.infrastructure;
 import com.ark.driverlicense.verification.domain.DriverLicense;
 import com.ark.driverlicense.verification.domain.DriverLicenseRepository;
 import java.util.List;
-import org.springframework.stereotype.Repository;
 
-@Repository
 class InMemoryDriverLicenseRepository implements DriverLicenseRepository {
 
     private final List<DriverLicense> driverLicenses;

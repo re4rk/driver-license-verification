@@ -10,3 +10,6 @@ spring:
       database: ${SPRING_REDIS_DATABASE:0}
       timeout: ${SPRING_REDIS_TIMEOUT:2000}
 
+ark:
+  driver-license:
+    type: redis
