@@ -1,5 +1,7 @@
 package com.ark.driverlicense.verification.infrastructure;
 
+import com.ark.driverlicense.verification.infrastructure.client.SafeDrivingLicenseVerificationClient;
+import com.ark.driverlicense.verification.infrastructure.client.VerificationResult;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;

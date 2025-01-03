@@ -1,4 +1,4 @@
-package com.ark.driverlicense.verification.infrastructure;
+package com.ark.driverlicense.verification.infrastructure.client;
 
 import com.ark.driverlicense.verification.domain.DriverLicense;
 import org.springframework.http.HttpEntity;

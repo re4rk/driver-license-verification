@@ -1,4 +1,4 @@
-package com.ark.driverlicense.verification.infrastructure;
+package com.ark.driverlicense.verification.infrastructure.repository;
 
 import lombok.Getter;
 import lombok.Setter;

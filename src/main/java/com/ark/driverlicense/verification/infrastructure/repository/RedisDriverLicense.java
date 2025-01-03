@@ -1,4 +1,4 @@
-package com.ark.driverlicense.verification.infrastructure;
+package com.ark.driverlicense.verification.infrastructure.repository;
 
 import com.ark.driverlicense.verification.domain.DriverLicense;
 import com.ark.driverlicense.verification.domain.LicenseStatus;
