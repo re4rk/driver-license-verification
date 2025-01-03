@@ -34,7 +34,8 @@ public class RepositoryConfig {
         havingValue = "REDIS"
     )
     public DriverLicenseRepository redisDriverLicenseRepository(
-        RedisTemplate<String, String> redisTemplate) {
+        RedisTemplate<String, RedisDriverLicense> redisTemplate
+    ) {
         log.info("Using Redis driver license repository");
         return new RedisDriverLicenseRepository(redisTemplate);
     }
