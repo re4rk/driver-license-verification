@@ -1,5 +1,6 @@
 package com.ark.driverlicense.verification.application;
 
+import com.ark.driverlicense.verification.domain.DriverLicenseRepository;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
@@ -23,8 +24,12 @@ class DriverLicenseServiceTest {
 
     @BeforeEach
     void setUp() {
+        DriverLicenseRepository driverLicenseRepository = mock(DriverLicenseRepository.class);
         verificationClient = mock(LicenseVerificationClient.class);
-        driverLicenseService = new DriverLicenseService(verificationClient);
+        driverLicenseService = new DriverLicenseService(
+            driverLicenseRepository,
+            verificationClient
+        );
     }
 
     @Test
