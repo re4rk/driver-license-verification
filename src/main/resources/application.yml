@@ -7,9 +7,9 @@ spring:
       ddl-auto: update
     show-sql: true
   datasource:
-    url: jdbc:postgresql://localhost:5433/uju
-    username: postgres
-    password: superscret
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/uju}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:superscret}
 
   data:
     redis:
@@ -21,4 +21,4 @@ spring:
 
 ark:
   driver-license:
-    type: jpa
+    type: ${ARK_DRIVER_LICENSE_TYPE:redis}
