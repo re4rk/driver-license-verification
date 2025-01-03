@@ -34,6 +34,8 @@ public class InMemoryDriverLicenseRepository implements DriverLicenseRepository 
     public void save(DriverLicense driverLicense) {
         if (TransactionSynchronizationManager.isActualTransactionActive()) {
             getTransactionCache().put(driverLicense.getId(), driverLicense);
+            var original = driverLicenses.get(driverLicense.getId());
+
             TransactionSynchronizationManager.registerSynchronization(
                 new TransactionSynchronization() {
                     @Override
@@ -43,6 +45,9 @@ public class InMemoryDriverLicenseRepository implements DriverLicenseRepository 
 
                     @Override
                     public void afterCompletion(int status) {
+                        if (status == STATUS_ROLLED_BACK && original != null) {
+                            driverLicenses.put(driverLicense.getId(), original);
+                        }
                         transactionCache.remove();
                     }
                 });
