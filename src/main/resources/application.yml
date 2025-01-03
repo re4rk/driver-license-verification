@@ -2,6 +2,15 @@ spring:
   application:
     name: driver-license
 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5433/uju
+    username: postgres
+    password: superscret
+
   data:
     redis:
       host: ${SPRING_REDIS_HOST:localhost}
@@ -12,4 +21,4 @@ spring:
 
 ark:
   driver-license:
-    type: redis
+    type: jpa

@@ -31,14 +31,16 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
 
+    // Database
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+    runtimeOnly("org.postgresql:postgresql")
+
     // RestTemplate
     implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
 
     // Validation
     implementation("jakarta.validation:jakarta.validation-api:3.0.1")
-
-    // Redis
-    implementation("org.springframework.boot:spring-boot-starter-data-redis")
 
     // Lombok
     compileOnly("org.projectlombok:lombok")

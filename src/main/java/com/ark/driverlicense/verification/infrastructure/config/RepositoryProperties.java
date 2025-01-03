@@ -12,6 +12,6 @@ public class RepositoryProperties {
     private RepositoryType type = RepositoryType.INMEMORY;
 
     public enum RepositoryType {
-        INMEMORY, REDIS
+        INMEMORY, REDIS, JPA
     }
 }
