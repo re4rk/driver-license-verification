@@ -4,7 +4,7 @@ import com.ark.driverlicense.verification.domain.DriverLicense;
 import com.ark.driverlicense.verification.domain.DriverLicenseRepository;
 import java.util.List;
 
-class InMemoryDriverLicenseRepository implements DriverLicenseRepository {
+public class InMemoryDriverLicenseRepository implements DriverLicenseRepository {
 
     private final List<DriverLicense> driverLicenses;
 

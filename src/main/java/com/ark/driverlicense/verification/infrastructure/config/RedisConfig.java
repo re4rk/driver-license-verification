@@ -1,5 +1,6 @@
-package com.ark.driverlicense.verification.infrastructure.repository;
+package com.ark.driverlicense.verification.infrastructure.config;
 
+import com.ark.driverlicense.verification.infrastructure.repository.RedisDriverLicense;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;

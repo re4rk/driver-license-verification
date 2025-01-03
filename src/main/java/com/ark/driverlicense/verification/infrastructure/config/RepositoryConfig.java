@@ -1,6 +1,9 @@
-package com.ark.driverlicense.verification.infrastructure.repository;
+package com.ark.driverlicense.verification.infrastructure.config;
 
 import com.ark.driverlicense.verification.domain.DriverLicenseRepository;
+import com.ark.driverlicense.verification.infrastructure.repository.InMemoryDriverLicenseRepository;
+import com.ark.driverlicense.verification.infrastructure.repository.RedisDriverLicense;
+import com.ark.driverlicense.verification.infrastructure.repository.RedisDriverLicenseRepository;
 import java.util.ArrayList;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

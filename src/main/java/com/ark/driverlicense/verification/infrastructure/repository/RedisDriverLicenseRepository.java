@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
 
 @Slf4j
-class RedisDriverLicenseRepository implements DriverLicenseRepository {
+public class RedisDriverLicenseRepository implements DriverLicenseRepository {
 
     private static final String KEY_PREFIX = "driver-license:";
     private final RedisTemplate<String, RedisDriverLicense> redisTemplate;
