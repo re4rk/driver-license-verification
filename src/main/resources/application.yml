@@ -21,4 +21,4 @@ spring:
 
 ark:
   driver-license:
-    type: ${ARK_DRIVER_LICENSE_TYPE:redis}
+    type: ${ARK_DRIVER_LICENSE_TYPE:inmemory}

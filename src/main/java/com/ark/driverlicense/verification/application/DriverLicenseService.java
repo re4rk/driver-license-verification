@@ -6,6 +6,7 @@ import com.ark.driverlicense.verification.domain.DriverLicense;
 import com.ark.driverlicense.verification.domain.DriverLicenseRepository;
 import com.ark.driverlicense.verification.infrastructure.client.LicenseVerificationClient;
 import com.ark.driverlicense.verification.infrastructure.client.VerificationResult;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ public class DriverLicenseService {
     private final DriverLicenseRepository driverLicenseRepository;
     private final LicenseVerificationClient verificationClient;
 
+    @Transactional
     public DriverLicenseDto verifyLicense(DriverLicenseData driverLicenseData) {
         DriverLicense license = driverLicenseData.toDomain();
         VerificationResult verificationResult = verificationClient.verify(license);

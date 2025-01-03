@@ -25,17 +25,6 @@ public class RepositoryConfig {
     @Bean
     @ConditionalOnProperty(
         name = "ark.driver-license.type",
-        havingValue = "INMEMORY",
-        matchIfMissing = true
-    )
-    public DriverLicenseRepository inMemoryDriverLicenseRepository() {
-        log.info("Using in-memory driver license repository");
-        return new InMemoryDriverLicenseRepository(new ArrayList<>());
-    }
-
-    @Bean
-    @ConditionalOnProperty(
-        name = "ark.driver-license.type",
         havingValue = "REDIS"
     )
     public DriverLicenseRepository redisDriverLicenseRepository(
