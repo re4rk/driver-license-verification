@@ -26,21 +26,27 @@ repositories {
 }
 
 dependencies {
+    // Spring Boot
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+
+    // RestTemplate
     implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
-    // validation;
+
+    // Validation
     implementation("jakarta.validation:jakarta.validation-api:3.0.1")
 
-    // lombok
+    // Redis
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
+    // Lombok
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     testCompileOnly("org.projectlombok:lombok")
     testAnnotationProcessor("org.projectlombok:lombok")
 
-
-
+    // Test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
